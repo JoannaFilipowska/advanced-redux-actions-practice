@@ -7,13 +7,6 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(
-  mapStateToProps,
-  null
-)(Modal);
-
-
-
 const mapDispatchToProps = dispatch => {
   return {
     setIsLoading: txt => dispatch(setIsLoading(txt))
@@ -21,8 +14,6 @@ const mapDispatchToProps = dispatch => {
 };
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(Modal);
-
-

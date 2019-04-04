@@ -1,10 +1,10 @@
 import { connect } from "react-redux";
 import CounterButton from "../components/CounterButton";
-import { increaseCounter } from "../actions";
+import { increaseCounter, decreaseCounter } from "../actions";
 const mapDispatchToProps = dispatch => {
   return {
     increase: txt => dispatch(increaseCounter(txt)),
-    decrease: txt => dispatch(increaseCounter(txt))
+    decrease: txt => dispatch(decreaseCounter(txt))
   };
 };
 
